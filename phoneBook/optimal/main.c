@@ -16,7 +16,6 @@ typedef struct __PHONE_BOOK_DATA {
     char city[16];
     char state[2];
     char zip[5];
-    struct __PHONE_BOOK_ENTRY *pNext;
 } PhoneBook_data;
 
 typedef struct __PHONE_BOOK_ENTRY {
@@ -74,7 +73,7 @@ int main(void)
     printf("%f microSec\n", (float)(end_time - start_time));
 
     if (getPb != NULL) {
-    	printf("Contact \"%s %s\" found.\n", getPb->LastName, getPb->data->FirstName);
+    	printf("Contact \"%s %s\" is found.\n", getPb->LastName, getPb->data->FirstName);
     }
 
     return 0;
